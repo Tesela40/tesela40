@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - Tesela 40</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            background-color: #a2a183;
+            color: #a2a183;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            background: rgba(239, 235, 224, 0.6);
+            padding: 60px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .main-text {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #a2a183;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin: 30px 0 20px 0;
+            color: #a2a183;
+            font-weight: 600;
+        }
+        .signature {
+            margin: 30px 0 50px 0;
+        }
+        .share-section {
+            margin-top: 40px;
+        }
+        .share-text {
+            font-size: 1.1rem;
+            color: #a2a183;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            background: #bf7969;
+            color: #efebe0;
+            padding: 12px 20px;
+            border: 2px solid #efebe0;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            transform: scale(1);
+            cursor: pointer;
+        }
+        .share-btn:hover {
+            background: rgba(191, 121, 105, 0.9);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="main-text">¡Gracias por unirte a Tesela 40! ¡Nuestras novedades llegarán pronto a tu buzón! Comparte e inspira a otros a encontrar la magia del regalo perfecto.</p>
+        
+        <h1>María y Rita</h1>
+        
+        <div class="signature">
+            <img src="/Recurso 3.svg" alt="Tesela 40 Logo" style="height: 40px; width: auto;">
+        </div>
+        
+        <div class="share-section">
+            <p class="share-text">Comparte con tus amigos:</p>
+            <div class="share-buttons">
+                <a href="https://wa.me/?text=Apúntate%20a%20esto,%20¡te%20va%20a%20encantar!%20Hay%20regalito%20si%20te%20apuntas%20ahora.%20https://tesela40.es" class="share-btn whatsapp" target="_blank" rel="noopener noreferrer">
+                    <img src="/whatsapp-icon.png" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"> WhatsApp
+                </a>
+                <a href="mailto:?subject=Te%20va%20a%20encantar%20Tesela%2040&body=Apúntate%20a%20esto,%20¡te%20va%20a%20encantar!%20Hay%20regalito%20si%20te%20apuntas%20ahora.%20https://tesela40.es" class="share-btn email">
+                    💌 Email
+                </a>
+                <button onclick="copyToClipboard()" class="share-btn copy">
+                    🔗 Copiar enlace
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const url = window.location.origin;
+            const message = "Apúntate a esto, ¡te va a encantar! Hay regalito si te apuntas ahora. " + url;
+            navigator.clipboard.writeText(message).then(function() {
+                alert('¡Enlace copiado! Ya puedes compartirlo en Instagram o donde quieras.');
+            });
+        }
+    </script>
+    
+    <script>
+    // Forzar que esta página se muestre
+    if (window.location.pathname === '/gracias.html') {
+      document.body.style.display = 'block';
+    }
+    </script>
+</body>
+</html>

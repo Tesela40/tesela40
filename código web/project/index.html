@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesela 40 - Artesanía contemporánea que cuenta historias</title>
+    <meta name="description" content="Tesela 40 - Regalos artesanales únicos: flores preservadas, cerámica, aromas, gastronomía y más. Únete a nuestra lista de espera." />
+    
+    <!-- Preconnect para mejorar performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags adicionales para SEO -->
+    <meta name="keywords" content="regalos artesanales, artesanía contemporánea, flores preservadas, cerámica, regalos únicos" />
+    <meta name="author" content="María y Rita - Tesela 40" />
+    <meta property="og:title" content="Tesela 40 - Artesanía contemporánea que cuenta historias" />
+    <meta property="og:description" content="Regalos artesanales únicos: flores preservadas, cerámica, aromas, gastronomía y más." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Scripts de reCAPTCHA (solo si es necesario para integraciones adicionales) -->
+    <!-- Nota: Netlify reCAPTCHA funciona automáticamente, este script es opcional -->
+  </head>
+  
+  <body>
+    <div id="root"></div>
+    
+    <!-- Formulario oculto COMPLETO para que Netlify lo detecte -->
+    <!-- IMPORTANTE: Debe tener EXACTAMENTE los mismos campos que el formulario real -->
+    <form name="waitlist" netlify netlify-honeypot="bot-field" hidden data-netlify-recaptcha="true">
+      <!-- Campos anti-bot (honeypot) -->
+      <input type="text" name="bot-field" />
+      <input type="text" name="website" />
+      <input type="email" name="email-confirm" />
+      <input type="tel" name="phone-check" />
+      
+      <!-- Campos reales del formulario -->
+      <input type="text" name="Nombre" />
+      <input type="email" name="Email" />
+      <input type="tel" name="Teléfono" />
+      <textarea name="Ideas"></textarea>
+      <textarea name="Regalo personalizado"></textarea>
+      <input type="checkbox" name="Acepta RGPD" />
+      
+      <!-- Campos adicionales para tracking -->
+      <input type="hidden" name="timestamp" />
+      <input type="hidden" name="timeOnPage" />
+      
+      <!-- reCAPTCHA de Netlify -->
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
